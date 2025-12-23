@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: service-health-api
 spec:
-  type: NodePort
   selector:
     app: service-health-api
+    version: v2
   ports:
     - port: 8000
       targetPort: 8000
+  type: NodePort

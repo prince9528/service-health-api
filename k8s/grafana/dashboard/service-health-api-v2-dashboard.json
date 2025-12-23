@@ -1,0 +1,85 @@
+{
+  "id": null,
+  "uid": "service-health-api-v2",
+  "title": "Service Health API v2",
+  "tags": ["devops", "monitoring", "fastapi"],
+  "timezone": "browser",
+  "schemaVersion": 38,
+  "version": 1,
+  "refresh": "10s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Service Uptime (seconds)",
+      "gridPos": { "x": 0, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "service_health_uptime_seconds",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "type": "gauge",
+      "title": "CPU Usage (%)",
+      "gridPos": { "x": 6, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "service_health_cpu_usage_percent",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100
+        }
+      }
+    },
+    {
+      "type": "gauge",
+      "title": "Memory Usage (%)",
+      "gridPos": { "x": 12, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "service_health_memory_usage_percent",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100
+        }
+      }
+    },
+    {
+      "type": "gauge",
+      "title": "Disk Usage (%)",
+      "gridPos": { "x": 18, "y": 0, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "service_health_disk_usage_percent",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0,
+          "max": 100
+        }
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP Requests / second",
+      "gridPos": { "x": 0, "y": 4, "w": 24, "h": 6 },
+      "targets": [
+        {
+          "expr": "rate(service_health_http_requests_total[1m])",
+          "refId": "A"
+        }
+      ]
+    }
+  ]
+}

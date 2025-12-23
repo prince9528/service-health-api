@@ -1,0 +1,4 @@
+k8s/grafana/dashboards/
+├── service-health-api-v2.json
+├── kubernetes-nodes.json      (optional later)
+├── kubernetes-pods.json       (optional later)

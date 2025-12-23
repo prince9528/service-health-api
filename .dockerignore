@@ -1,3 +1,30 @@
-__pycache__
+# Python cache
+__pycache__/
 *.pyc
+*.pyo
+
+# Virtual environments
+venv/
 .env
+
+# Git
+.git
+.gitignore
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Tests & docs (not needed in image)
+tests/
+README.md
+
+# Kubernetes & infra files
+k8s/
+
