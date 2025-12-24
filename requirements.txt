@@ -1,4 +1,4 @@
 fastapi
-uvicorn
-psutil
+uvicorn[standard]
 prometheus-client
+psutil

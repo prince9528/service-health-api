@@ -1,0 +1,6 @@
+git
+pipeline
+docker-workflow
+credentials
+github
+prometheus
